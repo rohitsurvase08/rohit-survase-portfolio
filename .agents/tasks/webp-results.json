@@ -1,0 +1,20 @@
+[
+  {
+    "input": "book_image.jpeg",
+    "output": "book_image.webp",
+    "width": 1329,
+    "height": 1879,
+    "inKB": "223.2",
+    "outKB": "39.6",
+    "reduction": "82.3%"
+  },
+  {
+    "input": "profile_image.png",
+    "output": "profile_image.webp",
+    "width": 1086,
+    "height": 1449,
+    "inKB": "1892.5",
+    "outKB": "97.8",
+    "reduction": "94.8%"
+  }
+]

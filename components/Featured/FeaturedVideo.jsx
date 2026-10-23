@@ -30,7 +30,7 @@ const FeaturedVideo = ({refForward, ...props }) => {
       {...props}
     >
       <Image
-        src="/profile_image.png"
+        src="/profile_image.webp"
         alt="Rohit Survase - Portfolio"
         fill
         priority

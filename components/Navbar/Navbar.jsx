@@ -91,7 +91,7 @@ function Navbar() {
             className="flex items-center gap-2.5 cursor-pointer hover:opacity-85 transition-opacity"
           >
             <img
-              src="/profile_image.png"
+              src="/profile_image.webp"
               alt="Rohit Survase"
               className="w-8 h-8 rounded-full object-cover border border-fg/10"
             />
@@ -197,7 +197,7 @@ function Navbar() {
           <div className="flex items-center">
             <Link href="/" aria-label="Home" className="flex items-center gap-3 hover:opacity-85 transition-opacity">
               <img
-                src="/profile_image.png"
+                src="/profile_image.webp"
                 alt="Rohit Survase"
                 className="w-10 h-10 rounded-full object-cover border border-fg/10"
               />

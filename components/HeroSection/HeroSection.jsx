@@ -203,7 +203,7 @@ const HeroSection = () => {
         >
           {/* Logo Sketch Avatar */}
           <img
-            src="/profile_image.png"
+            src="/profile_image.webp"
             alt="Rohit Survase"
             className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-white/10 mb-6 object-cover shadow-lg"
           />
