@@ -129,12 +129,12 @@ const Publications = () => {
               <div className="flex flex-col lg:flex-row">
                 {/* Book Cover / Visual */}
                 <div
-                  className="w-full lg:w-80 xl:w-96 flex-shrink-0 p-10 lg:p-12 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
+                  className="w-full lg:w-80 xl:w-96 flex-shrink-0 p-6 sm:p-10 lg:p-12 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
                 >
                   <img
                     src="/book_image.jpeg"
                     alt="Python: Fundamentals & Core Concepts Book Cover"
-                    className="w-full max-w-[280px] h-auto object-contain rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    className="w-full max-w-[200px] sm:max-w-[280px] h-auto object-contain rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 

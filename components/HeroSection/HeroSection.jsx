@@ -255,7 +255,7 @@ const HeroSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={loaderDone ? "visible" : "hidden"}
-          className="absolute top-1/2 -translate-y-1/2 left-6 sm:left-12 lg:left-20 z-10 max-w-[480px] flex flex-col items-start text-left pointer-events-auto bg-bg/85 p-6 rounded-2xl border border-fg/5 lg:bg-transparent lg:p-0 lg:border-none"
+          className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-6 md:left-12 lg:left-20 right-4 sm:right-auto z-10 max-w-[calc(100vw-2rem)] sm:max-w-[480px] flex flex-col items-start text-left pointer-events-auto bg-bg/85 p-4 sm:p-6 rounded-2xl border border-fg/5 lg:bg-transparent lg:p-0 lg:border-none"
         >
           <motion.span
             variants={itemVariants}
@@ -275,7 +275,7 @@ const HeroSection = () => {
           
           <motion.h1
             variants={itemVariants}
-            className="text-3xl sm:text-4xl lg:text-[2.95rem] font-black uppercase leading-[1.05] tracking-tight text-fg mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.95rem] font-black uppercase leading-[1.05] tracking-tight text-fg mb-4 sm:mb-6"
             style={{ fontFamily: "'AeonikBold', 'Neue Montreal', sans-serif" }}
           >
             AI-Assisted <br />
@@ -285,7 +285,7 @@ const HeroSection = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-[11px] sm:text-[13px] text-fg-muted leading-relaxed mb-8 max-w-[38ch]"
+            className="text-[10px] sm:text-[11px] md:text-[13px] text-fg-muted leading-relaxed mb-6 sm:mb-8 max-w-[38ch]"
             style={{ fontFamily: "'Neue Montreal', 'Inter', sans-serif" }}
           >
             Computer Engineering student building web and mobile<br />
@@ -295,12 +295,12 @@ const HeroSection = () => {
           {/* View Work & Download CV Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex items-center gap-5"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5 w-full sm:w-auto"
           >
             <a
               href="#projects-section"
               onClick={handleScrollToWork}
-              className="px-6 py-3 bg-fg text-bg hover:bg-fg/90 rounded-full flex items-center gap-2 text-[11px] font-semibold tracking-wide transition-all duration-200 active:scale-95 shadow-sm"
+              className="px-5 sm:px-6 py-2.5 sm:py-3 bg-fg text-bg hover:bg-fg/90 rounded-full flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-semibold tracking-wide transition-all duration-200 active:scale-95 shadow-sm min-h-[44px]"
               style={{ fontFamily: "'Neue Montreal', 'Inter', sans-serif" }}
             >
               <span>View My Work</span>
@@ -315,7 +315,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               download="Rohit_Survase_Software_Developer_Resume.pdf"
-              className="text-[11px] font-semibold hover:text-fg/80 flex items-center gap-1.5 pb-0.5 border-b border-current transition-all"
+              className="text-[10px] sm:text-[11px] font-semibold hover:text-fg/80 flex items-center justify-center sm:justify-start gap-1.5 pb-0.5 border-b border-current transition-all min-h-[44px]"
               style={{ fontFamily: "'Neue Montreal', 'Inter', sans-serif" }}
             >
               <span>View Resume</span>
