@@ -176,7 +176,7 @@ const AdditionalSkills = () => {
             Extended Capabilities
           </h2>
           <p className="text-[15px] md:text-lg text-fg-muted leading-relaxed max-w-3xl">
-            Technologies, Workflows, And Skills Used Or Explored Through AI-Assisted Projects. No Proficiency Levels Are Implied—These Represent Project Experience, AI-Assisted Workflows, And Capabilities Under Development.
+            Technologies, Workflows, And Skills Used Or Explored Through Projects And Development Work.
           </p>
         </div>
 
@@ -242,7 +242,7 @@ const AdditionalSkills = () => {
         {/* Disclaimer */}
         <div className="mt-10 md:mt-12 p-5 md:p-6 bg-bg-alt border border-theme-border rounded-xl">
           <p className="text-[13px] md:text-[15px] text-fg-muted leading-relaxed">
-            <span className="font-semibold text-fg">Note:</span> Items Represent A Combination Of Project Experience, AI-Assisted Workflows, Technologies Used Or Explored, And Capabilities Under Development. AI Assistance Is A Development Method, Not Proof Of Mastery Of Every Underlying Technology.
+            <span className="font-semibold text-fg">Note:</span> These Represent Project Experience, Technologies Used Or Explored, And Capabilities Under Development. No Proficiency Levels Are Implied.
           </p>
         </div>
       </div>

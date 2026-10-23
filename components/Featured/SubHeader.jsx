@@ -28,13 +28,10 @@ const SubHeader = () => {
     <div className='w-full flex flex-col items-start text-left px-4 md:px-0'>
       <div className='w-full text-[15px] md:text-lg lg:text-xl flex flex-col gap-3 md:gap-4 leading-relaxed text-left'>
         <p>
-          Hi, I&apos;m Rohit Rajesh Survase, A Computer Engineering Student At Isbm College Of Engineering, Pune. I&apos;m Interested In Building Useful Software Products.
+          Hi, I&apos;m Rohit Rajesh Survase, A Computer Engineering Student At ISBM College Of Engineering, Pune. I&apos;m Interested In Building Useful Software Products.
         </p>
         <p>
-          I Use Ai Coding Assistants To Help Plan, Prototype, Implement, Debug, And Refine Web And Mobile Applications. I Am Continuously Strengthening My Programming Fundamentals And Independent Technical Understanding Through Hands-On Projects, Code Review, And Testing.
-        </p>
-        <p>
-          Ai Assistance Is A Development Method—It Helps Accelerate The Process, But Generated Code Still Needs Human Review, Testing, And Validation To Ensure Quality And Correctness.
+          I Use AI Coding Assistants To Help Plan, Prototype, Implement, Debug, And Refine Web And Mobile Applications. I Am Continuously Strengthening My Programming Fundamentals And Independent Technical Understanding Through Hands-On Projects, Code Review, And Testing. AI Assistance Accelerates Development, But Generated Code Always Requires Human Review, Testing, And Validation.
         </p>
       </div>
 

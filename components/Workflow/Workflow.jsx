@@ -125,7 +125,7 @@ const Workflow = () => {
             How I Work
           </h2>
           <p className="text-base md:text-lg text-fg-muted leading-relaxed max-w-3xl">
-            Ai Assistance Accelerates The Development Process, But Generated Code Still Needs Human Review, Testing, And Validation. Here's My Practical Workflow For Building Software With Ai-Powered Tools:
+            Here's My Practical Workflow For Building Software With AI-Powered Tools:
           </p>
         </div>
 

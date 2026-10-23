@@ -61,7 +61,7 @@ const SiteFooter = () => {
         <div className="footer-brand">
           <h1 className="f-logo">Rohit Survase</h1>
           <p className="f-desc">
-            Computer Engineering Student At Isbm College Of Engineering, Pune. <br />
+            Computer Engineering Student At ISBM College Of Engineering, Pune. <br />
             Building Web And Mobile Applications With AI-Assisted Development Workflows.
           </p>
           <div className="f-socials">
