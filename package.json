@@ -1,7 +1,9 @@
 {
-  "name": "elfekky-portfolio",
+  "name": "rohit-survase-portfolio",
   "version": "0.1.0",
   "private": true,
+  "author": "Rohit Rajesh Survase",
+  "description": "Personal developer portfolio of Rohit Rajesh Survase — AI-assisted software development projects",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,6 +25,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.2",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "tailwindcss-3d": "^1.1.0"

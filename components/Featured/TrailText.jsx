@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useTrail, a, useSpring } from "@react-spring/web";
+import React from "react";
+import { useTrail, a } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 
 export const Trail = ({ children, callback, ...props }) => {
