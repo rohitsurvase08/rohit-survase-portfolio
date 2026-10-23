@@ -11,12 +11,17 @@ const HeroSection = () => {
   const loaderRef = useRef(null);
   const [loaderDone, setLoaderDone] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentText, setCurrentText] = useState("దేవేందర్ పోర్ట్‌ఫోలియో");
+  const [currentText, setCurrentText] = useState("ROHIT SURVASE");
+  const [hasAutoPlayed, setHasAutoPlayed] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     document.body.style.overflow = "hidden";
+
+    // Check if video has already autoplayed in this session
+    const autoPlayedFlag = sessionStorage.getItem("hero-video-autoplayed");
+    const shouldAutoPlay = !autoPlayedFlag;
 
     // Initial hidden state setup for background video (slightly scaled up to ease in)
     gsap.set(videoContainerRef.current, { autoAlpha: 0, scale: 1.05 });
@@ -25,6 +30,41 @@ const HeroSection = () => {
       onComplete: () => {
         setLoaderDone(true);
         document.body.style.overflow = "";
+        
+        // Autoplay video once on first visit WITH AUDIO
+        if (shouldAutoPlay && videoRef.current) {
+          // Try with audio first
+          videoRef.current.muted = false;
+          videoRef.current.volume = 1.0;
+          
+          // Small delay to ensure DOM is ready
+          setTimeout(() => {
+            if (videoRef.current) {
+              videoRef.current.play()
+                .then(() => {
+                  setIsPlaying(true);
+                  setHasAutoPlayed(true);
+                  sessionStorage.setItem("hero-video-autoplayed", "true");
+                  console.log("✅ Autoplay with audio successful");
+                })
+                .catch((err) => {
+                  console.log("⚠️ Autoplay with audio blocked, trying muted:", err);
+                  // Fallback: muted autoplay if browser blocks audio
+                  videoRef.current.muted = true;
+                  videoRef.current.play()
+                    .then(() => {
+                      setIsPlaying(true);
+                      setHasAutoPlayed(true);
+                      sessionStorage.setItem("hero-video-autoplayed", "true");
+                      console.log("✅ Autoplay muted successful");
+                    })
+                    .catch(() => {
+                      console.log("❌ All autoplay attempts failed");
+                    });
+                });
+            }
+          }, 300);
+        }
       },
     });
 
@@ -51,9 +91,9 @@ const HeroSection = () => {
       "start+=3.2"
     );
 
-    // Timeout-based interactive name transitions in different languages
-    const t1 = setTimeout(() => setCurrentText("देवेन्द्र पोर्टफोलियो"), 1000);
-    const t2 = setTimeout(() => setCurrentText("DEVENDER PORTFOLIO"), 2000);
+    // Timeout-based interactive name transitions
+    const t1 = setTimeout(() => setCurrentText("AI-ASSISTED DEVELOPER"), 1000);
+    const t2 = setTimeout(() => setCurrentText("ROHIT SURVASE"), 2000);
 
     return () => {
       tl.kill();
@@ -95,11 +135,24 @@ const HeroSection = () => {
       videoRef.current.pause();
       setIsPlaying(false);
     } else {
-      // Unmute the video for audio playback
+      // Unmute the video for manual playback (with sound)
       videoRef.current.muted = false;
+      videoRef.current.volume = 1.0; // Set volume to 100%
+      videoRef.current.currentTime = 0; // Restart video from beginning
       videoRef.current.play()
-        .then(() => setIsPlaying(true))
+        .then(() => {
+          setIsPlaying(true);
+          console.log("Video playing with audio:", !videoRef.current.muted, "Volume:", videoRef.current.volume);
+        })
         .catch((err) => console.log("Video playback failed:", err));
+    }
+  };
+
+  // Handle video ended - pause and show play button
+  const handleVideoEnded = () => {
+    setIsPlaying(false);
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0; // Reset to start
     }
   };
 
@@ -150,8 +203,8 @@ const HeroSection = () => {
         >
           {/* Logo Sketch Avatar */}
           <img
-            src="/avatar-logo.jpg"
-            alt="Logo"
+            src="/profile_image.png"
+            alt="Rohit Survase"
             className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-white/10 mb-6 object-cover shadow-lg"
           />
 
@@ -163,7 +216,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[#F5F1EA] text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest uppercase"
+              className="text-[#F5F1EA] text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-widest uppercase"
               style={{ fontFamily: "'Neue Montreal', 'Inter', sans-serif" }}
             >
               {currentText}
@@ -190,9 +243,9 @@ const HeroSection = () => {
           <video
             ref={videoRef}
             src="/hero-bg-video.mp4"
-            loop
             playsInline
             preload="auto"
+            onEnded={handleVideoEnded}
             className="w-full h-full object-cover object-center"
           />
         </div>
@@ -206,10 +259,10 @@ const HeroSection = () => {
         >
           <motion.span
             variants={itemVariants}
-            className="text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-fg-muted/80 uppercase mb-2"
+            className="text-[9px] sm:text-[11px] font-semibold tracking-[0.22em] text-fg-muted/80 uppercase mb-2"
             style={{ fontFamily: "'Neue Montreal', 'Inter', sans-serif" }}
           >
-            HELLO, I'M DEV
+            Hello, I'm Rohit
           </motion.span>
           
           <motion.div
@@ -222,21 +275,21 @@ const HeroSection = () => {
           
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-[3.2rem] font-black uppercase leading-[1.05] tracking-tight text-fg mb-6"
+            className="text-3xl sm:text-4xl lg:text-[2.95rem] font-black uppercase leading-[1.05] tracking-tight text-fg mb-6"
             style={{ fontFamily: "'AeonikBold', 'Neue Montreal', sans-serif" }}
           >
-            UI/UX DESIGNER <br />
-            & FULL STACK <br />
-            <span className="text-fg-muted/65 font-bold">WEB DEVELOPER</span>
+            AI-Assisted <br />
+            Software <br />
+            <span className="text-fg-muted/65 font-bold">Developer</span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-xs sm:text-sm text-fg-muted leading-relaxed mb-8 max-w-[38ch]"
+            className="text-[11px] sm:text-[13px] text-fg-muted leading-relaxed mb-8 max-w-[38ch]"
             style={{ fontFamily: "'Neue Montreal', 'Inter', sans-serif" }}
           >
-            Designing beautiful interfaces and building<br />
-            scalable web applications.
+            Computer Engineering student building web and mobile<br />
+            applications with rapid prototyping workflows.
           </motion.p>
 
           {/* View Work & Download CV Buttons */}
@@ -247,7 +300,7 @@ const HeroSection = () => {
             <a
               href="#projects-section"
               onClick={handleScrollToWork}
-              className="px-6 py-3 bg-fg text-bg hover:bg-fg/90 rounded-full flex items-center gap-2 text-xs font-semibold tracking-wide transition-all duration-200 active:scale-95 shadow-sm"
+              className="px-6 py-3 bg-fg text-bg hover:bg-fg/90 rounded-full flex items-center gap-2 text-[11px] font-semibold tracking-wide transition-all duration-200 active:scale-95 shadow-sm"
               style={{ fontFamily: "'Neue Montreal', 'Inter', sans-serif" }}
             >
               <span>View My Work</span>
@@ -258,17 +311,17 @@ const HeroSection = () => {
             </a>
 
             <a
-              href="/Devender_Gopagoni_Resume.pdf"
+              href="/Rohit_Survase_Software_Developer_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              download="Devender_Gopagoni_Resume.pdf"
-              className="text-xs font-semibold hover:text-fg/80 flex items-center gap-1.5 pb-0.5 border-b border-current transition-all"
+              download="Rohit_Survase_Software_Developer_Resume.pdf"
+              className="text-[11px] font-semibold hover:text-fg/80 flex items-center gap-1.5 pb-0.5 border-b border-current transition-all"
               style={{ fontFamily: "'Neue Montreal', 'Inter', sans-serif" }}
             >
-              <span>Download CV</span>
+              <span>View Resume</span>
               <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <polyline points="19 12 12 19 5 12"/>
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
               </svg>
             </a>
           </motion.div>
@@ -278,16 +331,13 @@ const HeroSection = () => {
             variants={itemVariants}
             className="flex items-center gap-5 mt-8 text-fg/60"
           >
-            <a href="https://github.com/devendharoff" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" className="hover:text-fg transition-colors">
+            <a href="https://github.com/rohitsurvase08" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" className="hover:text-fg transition-colors">
               <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             </a>
-            <a href="https://www.linkedin.com/in/devender-goud-033875338/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" className="hover:text-fg transition-colors">
+            <a href="https://www.linkedin.com/in/rohitsurvase08" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" className="hover:text-fg transition-colors">
               <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="https://www.instagram.com/devendharoff/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram (Personal)" aria-label="Instagram (Personal)" className="hover:text-fg transition-colors">
-              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="https://www.instagram.com/connects.ai" target="_blank" rel="noopener noreferrer" title="Instagram (Connects AI)" aria-label="Instagram (Connects AI)" className="hover:text-fg transition-colors">
+            <a href="https://www.instagram.com/rohitsurvase08" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram" className="hover:text-fg transition-colors">
               <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
           </motion.div>
@@ -316,7 +366,7 @@ const HeroSection = () => {
             )}
           </span>
           <span className="text-[11px] font-bold tracking-[0.18em] uppercase pr-2">
-            {isPlaying ? "PAUSE VIDEO" : "PLAY VIDEO"}
+            {isPlaying ? "Pause Video" : "Play Video"}
           </span>
         </motion.button>
       </section>

@@ -217,7 +217,7 @@ html {
 
 #loader-counter {
   color: #F9F8FF;
-  font-size: 6vw;
+  font-size: 5.5vw;
   font-family: var(--font-inter), 'Inter', sans-serif;
   font-weight: 600;
   letter-spacing: -0.07em;
@@ -364,7 +364,7 @@ html {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 22vw;
+  font-size: 20vw;
   font-family: var(--font-inter), 'Inter', sans-serif;
   z-index: 5;
   font-weight: 600;
@@ -403,7 +403,7 @@ html {
 }
 
 .about-inline-services__label {
-  font-size: 0.75vw;
+  font-size: 0.7vw;
   letter-spacing: 0.28em;
   font-weight: 600;
   text-transform: uppercase;
@@ -438,7 +438,7 @@ html {
 
 .about-inline-services__item h4 {
   margin: 0;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.12;
@@ -447,7 +447,7 @@ html {
 .about-inline-services__item p {
   margin: 0.5vw 0 0;
   max-width: 52ch;
-  font-size: 0.85vw;
+  font-size: 0.78vw;
   line-height: 1.45;
   opacity: 0.8;
 }
@@ -463,7 +463,7 @@ html {
 }
 
 .pj-label {
-  font-size: 0.95vw;
+  font-size: 0.88vw;
   letter-spacing: 0.28em;
   font-weight: 600;
   text-transform: uppercase;
@@ -471,12 +471,12 @@ html {
 }
 
 .pj-title {
-  font-size: 5vw;
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1;
+  font-size: 9.2vw;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
   margin: 0;
-  text-transform: lowercase;
+  text-transform: uppercase;
   color: var(--color-text);
 }
 
@@ -506,7 +506,7 @@ html {
 }
 
 .pj-num {
-  font-size: 0.95vw;
+  font-size: 0.88vw;
   letter-spacing: 0.2em;
   font-weight: 500;
   color: var(--color-text);
@@ -529,19 +529,19 @@ html {
 }
 
 .pj-name {
-  font-size: 4vw;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
-  text-transform: lowercase;
+  font-size: 3.7vw;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-transform: none;
 }
 
 .pj-role {
-  font-size: 1vw;
-  letter-spacing: 0.18em;
+  font-size: 0.92vw;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 500;
-  opacity: 0.55;
+  font-weight: 600;
+  opacity: 0.65;
   color: var(--color-text);
 }
 
@@ -551,13 +551,13 @@ html {
 }
 
 .pj-note {
-  font-size: 1vw;
+  font-size: 0.92vw;
   font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
   color: var(--color-text);
-  opacity: 0.7;
-  max-width: 60ch;
+  opacity: 0.75;
+  max-width: 70ch;
 }
 
 .pj-link:hover .pj-note {
@@ -585,7 +585,7 @@ html {
 }
 
 .pj-dot {
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   opacity: 0.4;
 }
 
@@ -594,12 +594,12 @@ html {
 }
 
 .pj-kind {
-  font-size: 0.95vw;
-  letter-spacing: 0.2em;
-  font-weight: 500;
+  font-size: 0.88vw;
+  letter-spacing: 0.15em;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--color-text);
-  opacity: 0.6;
+  opacity: 0.7;
   white-space: nowrap;
 }
 
@@ -628,7 +628,7 @@ html {
   }
 
   .about-inline-services__label {
-    font-size: 2.4vw;
+    font-size: 2.2vw;
   }
 
   .about-inline-services__grid {
@@ -643,12 +643,12 @@ html {
   }
 
   .about-inline-services__item h4 {
-    font-size: 4.8vw;
+    font-size: 4.4vw;
   }
 
   .about-inline-services__item p {
     margin-top: 2vw;
-    font-size: 2.4vw;
+    font-size: 2.2vw;
     max-width: 60ch;
   }
 
@@ -662,11 +662,13 @@ html {
   }
 
   .pj-label {
-    font-size: 2.4vw;
+    font-size: 2.2vw;
   }
 
   .pj-title {
-    font-size: 9vw;
+    font-size: 13vw;
+    font-weight: 700;
+    letter-spacing: -0.05em;
   }
 
   .pj-link {
@@ -675,20 +677,25 @@ html {
   }
 
   .pj-num {
-    font-size: 2.6vw;
+    font-size: 2.4vw;
     min-width: 8vw;
   }
 
   .pj-name {
     font-size: 6vw;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   .pj-role {
-    font-size: 2.4vw;
+    font-size: 2vw;
+    letter-spacing: 0.1em;
+    font-weight: 600;
   }
 
   .pj-note {
-    font-size: 2.4vw;
+    font-size: 2vw;
+    line-height: 1.5;
   }
 
   .pj-kind {
@@ -701,7 +708,7 @@ html {
   }
 
   .pj-dot {
-    font-size: 5vw;
+    font-size: 4.6vw;
   }
 
   .pj-head--secondary {
@@ -711,40 +718,47 @@ html {
 
 @media (max-width: 480px) {
   .about-inline-services__label {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 
   .about-inline-services__item h4 {
-    font-size: 6.8vw;
+    font-size: 6.3vw;
   }
 
   .about-inline-services__item p {
-    font-size: 3.2vw;
+    font-size: 3vw;
     line-height: 1.5;
   }
 
   .pj-label {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 
   .pj-title {
-    font-size: 11vw;
+    font-size: 14.8vw;
+    font-weight: 700;
+    letter-spacing: -0.04em;
   }
 
   .pj-num {
-    font-size: 3.2vw;
+    font-size: 3vw;
   }
 
   .pj-name {
-    font-size: 7.5vw;
+    font-size: 7.2vw;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   .pj-role {
-    font-size: 3vw;
+    font-size: 2.6vw;
+    letter-spacing: 0.1em;
+    font-weight: 600;
   }
 
   .pj-note {
-    font-size: 3vw;
+    font-size: 2.6vw;
+    line-height: 1.5;
   }
 
   .pj-arrow {
@@ -792,7 +806,7 @@ html {
 }
 
 .Horizontal .heading-xl {
-  font-size: clamp(2rem, 14vw, 12rem);
+  font-size: clamp(1.85rem, 13vw, 11rem);
   font-weight: 600;
   line-height: 1.1;
   color: var(--color-text);
@@ -807,25 +821,25 @@ html {
 
 /* ── FEATURED HEADER (Beyond Visions / Within Reach) ── */
 .featured-header {
-  font-size: 9rem;
+  font-size: 8.3rem;
   line-height: 1;
 }
 
 @media (max-width: 1024px) {
   .featured-header {
-    font-size: 5rem;
+    font-size: 4.6rem;
   }
 }
 
 @media (max-width: 768px) {
   .featured-header {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .featured-header {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -849,7 +863,7 @@ html {
 
 #ct-eyebrow {
   color: var(--color-text-muted);
-  font-size: 1vw;
+  font-size: 0.92vw;
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -860,7 +874,7 @@ html {
 
 #ct-headline {
   color: var(--color-text);
-  font-size: clamp(3rem, 18vw, 18rem);
+  font-size: clamp(2.8rem, 16.5vw, 16.5rem);
   font-weight: 600;
   letter-spacing: -0.07em;
   text-transform: lowercase;
@@ -872,7 +886,7 @@ html {
 
 #ct-email {
   color: var(--color-text);
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   font-weight: 500;
   letter-spacing: -0.01em;
   text-decoration: none;
@@ -907,7 +921,7 @@ html {
   min-height: 48px;
   border-radius: 5vw;
   text-decoration: none;
-  font-size: 0.85vw;
+  font-size: 0.78vw;
   font-weight: 600;
   letter-spacing: 0.22em;
   cursor: pointer;
@@ -987,7 +1001,7 @@ html {
 
 .f-logo {
   font-family: var(--font-inter), 'Inter', sans-serif;
-  font-size: 5vw;
+  font-size: 4.6vw;
   color: var(--color-text);
   letter-spacing: -0.05em;
   line-height: 1;
@@ -996,7 +1010,7 @@ html {
 }
 
 .f-desc {
-  font-size: 1.1vw;
+  font-size: 1vw;
   color: var(--color-text-muted);
   font-weight: 400;
   line-height: 1.5;
@@ -1041,7 +1055,7 @@ html {
 
 .f-col h3 {
   font-family: var(--font-inter), 'Inter', sans-serif;
-  font-size: 1.1vw;
+  font-size: 1vw;
   color: var(--color-text);
   letter-spacing: 0.15em;
   margin-bottom: 0.8vw;
@@ -1052,7 +1066,7 @@ html {
 .f-col a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 1vw;
+  font-size: 0.92vw;
   font-weight: 400;
   transition: all 0.3s ease;
   position: relative;
@@ -1110,29 +1124,29 @@ html {
 /* ── MOBILE / TABLET ── */
 @media (max-width: 1024px) {
   /* Contact — slightly larger eyebrow / button text on tablet */
-  #ct-eyebrow { font-size: 1.4vw; letter-spacing: 0.2em; }
-  #ct-email { font-size: 2vw; }
+  #ct-eyebrow { font-size: 1.3vw; letter-spacing: 0.2em; }
+  #ct-email { font-size: 1.85vw; }
   #ct-btn,
   #ct-btn-secondary {
     height: 6vh;
     min-height: 44px;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     padding: 0 3vw;
   }
 
   /* Footer — tablet font scaling */
-  .f-logo { font-size: 7vw; }
-  .f-desc { font-size: 1.5vw; }
-  .f-col h3 { font-size: 1.5vw; }
-  .f-col a { font-size: 1.4vw; }
-  .footer-bottom { font-size: 1.2vw; }
+  .f-logo { font-size: 6.5vw; }
+  .f-desc { font-size: 1.4vw; }
+  .f-col h3 { font-size: 1.4vw; }
+  .f-col a { font-size: 1.3vw; }
+  .footer-bottom { font-size: 1.1vw; }
   .f-socials a { width: 4vw; height: 4vw; }
 }
 
 @media (max-width: 768px) {
   /* Loader — tablet size */
   #loader-counter {
-    font-size: 13vw;
+    font-size: 12vw;
     padding-right: 6.5vw;
     padding-bottom: 11vw;
   }
@@ -1174,7 +1188,7 @@ html {
     align-items: center;
     gap: 0;
     width: 90%;
-    font-size: clamp(3.5rem, 15vw, 6.5rem);
+    font-size: clamp(3.2rem, 14vw, 6rem);
     letter-spacing: 0.01em;
     line-height: 0.92;
     white-space: normal;
@@ -1205,7 +1219,7 @@ html {
 
   /* Horizontal scroll — tablet heading scaling */
   .Horizontal .heading-xl {
-    font-size: clamp(2.2rem, 14vw, 5rem);
+    font-size: clamp(2rem, 13vw, 4.6rem);
     line-height: 1.05;
     padding: 0 4vw;
   }
@@ -1219,19 +1233,19 @@ html {
   }
 
   #ct-eyebrow {
-    font-size: 2.8vw;
+    font-size: 2.6vw;
     letter-spacing: 0.15em;
     white-space: normal;
   }
 
   #ct-headline {
-    font-size: clamp(2.8rem, 18vw, 7rem);
+    font-size: clamp(2.6rem, 16.5vw, 6.5rem);
     margin: 1.5vw 0;
     white-space: normal;
   }
 
   #ct-email {
-    font-size: 3.2vw;
+    font-size: 3vw;
     margin-top: 1.5vw;
   }
 
@@ -1249,7 +1263,7 @@ html {
     height: auto;
     min-height: 56px;
     padding: 18px 24px;
-    font-size: 3vw;
+    font-size: 2.8vw;
     letter-spacing: 0.2em;
   }
 
@@ -1276,12 +1290,12 @@ html {
   }
 
   .f-logo {
-    font-size: 14vw;
+    font-size: 13vw;
     line-height: 0.95;
   }
 
   .f-desc {
-    font-size: 4vw;
+    font-size: 3.7vw;
     line-height: 1.5;
   }
 
@@ -1310,12 +1324,12 @@ html {
   }
 
   .f-col h3 {
-    font-size: 3.2vw;
+    font-size: 3vw;
     margin-bottom: 2vw;
   }
 
   .f-col a {
-    font-size: 4vw;
+    font-size: 3.7vw;
   }
 
   .footer-bottom {
@@ -1323,7 +1337,7 @@ html {
     align-items: flex-start;
     gap: 4vw;
     padding-top: 6vw;
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 
   .footer-bottom-links {
@@ -1334,7 +1348,7 @@ html {
 
 @media (max-width: 480px) {
   #hero-heading {
-    font-size: clamp(3rem, 17vw, 5.5rem);
+    font-size: clamp(2.8rem, 15.5vw, 5rem);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1368,31 +1382,31 @@ html {
   }
 
   #ct-eyebrow {
-    font-size: 3.6vw;
+    font-size: 3.3vw;
   }
 
   #ct-headline {
-    font-size: clamp(3rem, 26vw, 7rem);
+    font-size: clamp(2.8rem, 24vw, 6.5rem);
   }
 
   #ct-email {
-    font-size: 4vw;
+    font-size: 3.7vw;
     word-break: break-all;
     text-align: center;
   }
 
   #ct-btn,
   #ct-btn-secondary {
-    font-size: 3.6vw;
+    font-size: 3.3vw;
     width: 86vw;
   }
 
   .f-logo {
-    font-size: 16vw;
+    font-size: 14.8vw;
   }
 
   .footer-bottom {
-    font-size: 3.4vw;
+    font-size: 3.1vw;
   }
 }
 
@@ -1441,11 +1455,11 @@ html {
   }
 
   .about-inline-services__item h4 {
-    font-size: 6.2vw;
+    font-size: 5.7vw;
   }
 
   .about-inline-services__item p {
-    font-size: 3.4vw;
+    font-size: 3.1vw;
     margin-top: 2.5vw;
   }
 
@@ -1475,11 +1489,11 @@ html {
   }
 
   .f-col h3 {
-    font-size: 3.6vw;
+    font-size: 3.3vw;
   }
 
   .f-col a {
-    font-size: 4.2vw;
+    font-size: 3.9vw;
     word-break: break-word;
   }
 
@@ -1492,7 +1506,7 @@ html {
   }
 
   .Horizontal .heading-xl {
-    font-size: clamp(2rem, 15vw, 4.5rem);
+    font-size: clamp(1.85rem, 14vw, 4.15rem);
   }
 }
 
@@ -1500,23 +1514,23 @@ html {
    Extra safety net for iPhone SE-class widths so nothing overflows. */
 @media (max-width: 360px) {
   #hero-heading {
-    font-size: clamp(2.75rem, 17vw, 4.5rem);
+    font-size: clamp(2.5rem, 15.5vw, 4.15rem);
   }
 
   #ct-headline {
-    font-size: clamp(2.6rem, 24vw, 5.5rem);
+    font-size: clamp(2.4rem, 22vw, 5rem);
   }
 
   .pj-title {
-    font-size: 12vw;
+    font-size: 11vw;
   }
 
   .pj-name {
-    font-size: 8vw;
+    font-size: 7.4vw;
   }
 
   .f-logo {
-    font-size: 18vw;
+    font-size: 16.5vw;
   }
 }
 

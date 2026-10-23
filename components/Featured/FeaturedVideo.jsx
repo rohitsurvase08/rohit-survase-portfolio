@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
-import featuredImage from "../../d7e3f658-ad2c-4625-a3eb-165e8d54403c.jpg";
 
 const FeaturedVideo = ({refForward, ...props }) => {
   const ref = useRef(null);
@@ -31,8 +30,8 @@ const FeaturedVideo = ({refForward, ...props }) => {
       {...props}
     >
       <Image
-        src={featuredImage}
-        alt="Featured portrait"
+        src="/profile_image.png"
+        alt="Rohit Survase - Portfolio"
         fill
         priority
         sizes="(max-width: 768px) 80vw, 40vw"

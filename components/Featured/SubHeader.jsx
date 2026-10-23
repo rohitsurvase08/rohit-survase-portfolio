@@ -1,46 +1,49 @@
 import React from 'react'
 
-const SERVICES = [
+const CORE_EXPERTISE = [
   {
-    title: 'Frontend Development',
+    title: 'AI-Assisted Development',
     body:
-      'React.js, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS for fast, responsive web apps.',
+      'Using AI Coding Assistants To Generate, Review, Debug, And Refine Code Across Web And Mobile Applications.',
+  },
+  {
+    title: 'Web Development',
+    body:
+      'Building Responsive Websites With Python (Flask), Javascript, Html, Css, And Modern Frameworks.',
+  },
+  {
+    title: 'Mobile App Development',
+    body:
+      'Creating Cross-Platform Mobile Applications Using Flutter And Dart For Ios And Android.',
   },
   {
     title: 'Backend & Databases',
     body:
-      'Node.js, Express.js, REST APIs, Supabase, and PostgreSQL powering scalable server architecture.',
-  },
-  {
-    title: 'AI & Automation',
-    body:
-      'OpenAI Integration, AI Chatbots, WhatsApp Automation, AI Agents, AI Workflows, and CRM Automation.',
-  },
-  {
-    title: 'CMS, SaaS & Dashboards',
-    body:
-      'WordPress, Shopify, custom Admin Dashboards, Authentication systems, and API integrations.',
+      'Working With Postgresql, Supabase, Rest Apis, And Backend Integration For Full-Stack Applications.',
   },
 ];
 
 const SubHeader = () => {
   return (
     <div className='w-full flex flex-col items-start text-left px-4 md:px-0'>
-      <div className='w-full text-base md:text-lg lg:text-xl flex flex-col gap-3 md:gap-4 leading-relaxed text-left'>
+      <div className='w-full text-[15px] md:text-lg lg:text-xl flex flex-col gap-3 md:gap-4 leading-relaxed text-left'>
         <p>
-          Hi, I&apos;m Devender, a Full-Stack Web Developer and UI/UX-focused Product Builder.
+          Hi, I&apos;m Rohit Rajesh Survase, A Computer Engineering Student At Isbm College Of Engineering, Pune. I&apos;m Interested In Building Useful Software Products.
         </p>
         <p>
-          I specialize in designing and developing premium websites, SaaS platforms, AI-powered applications, dashboards, and modern digital experiences that solve real business problems.
+          I Use Ai Coding Assistants To Help Plan, Prototype, Implement, Debug, And Refine Web And Mobile Applications. I Am Continuously Strengthening My Programming Fundamentals And Independent Technical Understanding Through Hands-On Projects, Code Review, And Testing.
+        </p>
+        <p>
+          Ai Assistance Is A Development Method—It Helps Accelerate The Process, But Generated Code Still Needs Human Review, Testing, And Validation To Ensure Quality And Correctness.
         </p>
       </div>
 
       <div className='about-inline-services w-full mt-8 md:mt-12 h-auto'>
         <div className='about-inline-services__head'>
-          <span className='about-inline-services__label'>CORE EXPERTISE</span>
+          <span className='about-inline-services__label'>Core Expertise</span>
         </div>
         <div className='about-inline-services__grid'>
-          {SERVICES.map((service) => (
+          {CORE_EXPERTISE.map((service) => (
             <article key={service.title} className='about-inline-services__item'>
               <h4>{service.title}</h4>
               <p>{service.body}</p>

@@ -59,31 +59,52 @@ const SiteFooter = () => {
     <footer id="main-footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <h1 className="f-logo">DEVENDER</h1>
+          <h1 className="f-logo">Rohit Survase</h1>
           <p className="f-desc">
-            Full-Stack Web Developer & UI/UX Product Builder. <br />
-            Transforming ideas into production-ready applications.
+            Computer Engineering Student At Isbm College Of Engineering, Pune. <br />
+            Building Web And Mobile Applications With AI-Assisted Development Workflows.
           </p>
+          <div className="f-socials">
+            <a href="https://github.com/rohitsurvase08" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <GithubIcon />
+            </a>
+            <a href="https://www.linkedin.com/in/rohitsurvase08" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <LinkedinIcon />
+            </a>
+            <a href="https://www.instagram.com/rohitsurvase08" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <Icon>
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </Icon>
+            </a>
+            <a href="https://t.me/rohitsurvase08" target="_blank" rel="noreferrer" aria-label="Telegram">
+              <Icon>
+                <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.153-.95.38-1.19.813-.097.176-.151.371-.154.586-.003.424.207.785.48 1.01.273.226.588.365.85.452l3.727 1.175c.414.136.848.049 1.188-.166.809-.511 1.639-1.038 2.468-1.564 1.658-1.052 3.316-2.104 4.973-3.156.124-.076.276-.155.431-.15.084.003.171.03.252.094.145.115.162.325.099.502-.051.143-.16.25-.271.341-1.47 1.203-2.94 2.407-4.41 3.61-.433.355-.867.71-1.3 1.065-.15.123-.3.262-.406.444-.108.183-.164.4-.129.614.03.192.117.37.23.527.113.157.257.288.407.405 1.277 1 2.554 2 3.831 3 .15.117.31.23.483.323.174.092.365.157.559.18.361.044.734-.081.99-.338.26-.26.398-.62.497-1.003.699-2.7 1.398-5.4 2.097-8.1.1-.386.198-.772.295-1.158.068-.272.135-.553.153-.838.017-.282-.01-.578-.132-.837-.123-.259-.35-.467-.614-.606a1.77 1.77 0 0 0-.864-.155z" />
+              </Icon>
+            </a>
+          </div>
         </div>
         <div className="footer-links">
           <div className="f-col">
-            <h3>EXPLORE PROJECTS</h3>
-            <a href="https://devendhargopagoni.netlify.app/" target="_blank" rel="noreferrer">Personal Portfolio</a>
-            <a href="https://nomoredms.vercel.app/" target="_blank" rel="noreferrer">NoMoreDMS</a>
-            <a href="https://educalc-expert0509.vercel.app/" target="_blank" rel="noreferrer">EduCalc</a>
-            <a href="https://postlearn-lake.vercel.app/" target="_blank" rel="noreferrer">PostLearn</a>
+            <h3>Navigation</h3>
+            <a href="#about">About</a>
+            <a href="#projects-section">Projects</a>
+            <a href="#contact-section">Contact</a>
           </div>
           <div className="f-col">
-            <h3>CLIENT WORK</h3>
-            <a href="https://maatoori-akshith.netlify.app/" target="_blank" rel="noreferrer">Maatoori Akshith Portfolio</a>
-            <a href="https://teamz09.netlify.app/" target="_blank" rel="noreferrer">TeamZ Business Site</a>
-            <a href="#contact-section">Get in touch</a>
+            <h3>Connect</h3>
+            <a href="https://github.com/rohitsurvase08" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/rohitsurvase08" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/rohitsurvase08" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://t.me/rohitsurvase08" target="_blank" rel="noreferrer">Telegram</a>
+            <a href="mailto:survaser06@gmail.com">Email</a>
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Devender. All rights reserved.</p>
-        <p>Built with Next.js &amp; Tailwind CSS</p>
+        <p>© {new Date().getFullYear()} Rohit Rajesh Survase. All Rights Reserved.</p>
+        <p>Built With Next.js, Tailwind Css & AI-Assisted Development</p>
       </div>
     </footer>
   );

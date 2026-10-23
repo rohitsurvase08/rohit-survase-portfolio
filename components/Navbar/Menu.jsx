@@ -84,10 +84,10 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
   // document" (the hero) since the hero owns the first viewport without
   // needing a separate offset.
   const navItems = [
-    { label: "HOME", target: "top" },
-    { label: "ABOUT", target: "about" },
-    { label: "WORK", target: "projects-section" },
-    { label: "CONTACT", target: "contact-section" },
+    { label: "Home", target: "top" },
+    { label: "About", target: "about" },
+    { label: "Work", target: "projects-section" },
+    { label: "Contact", target: "contact-section" },
   ];
 
   const handleNavClick = (e, target) => {
@@ -131,9 +131,9 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
             style={news}
           >
             <div className="font-Aeonik text-3xl leading-tight">
-              Got an idea?
+              Got An Idea?
               <br />
-              Let&apos;s talk.
+              Let&apos;s Talk.
             </div>
             <div className="flex flex-col gap-2 mt-5">
               <a
@@ -141,17 +141,7 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
                 onClick={() => onClose && onClose()}
                 className="flex items-center justify-between bg-fg text-bg rounded-xl px-4 py-3 text-sm tracking-widest font-semibold transition-transform duration-200 hover:-translate-y-0.5"
               >
-                <span>GET IN TOUCH</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                href="https://devendhargopagoni.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => onClose && onClose()}
-                className="flex items-center justify-between border-2 border-fg text-fg rounded-xl px-4 py-3 text-sm tracking-widest font-semibold transition-colors duration-200 hover:bg-accent-soft"
-              >
-                <span>PORTFOLIO</span>
+                <span>Get In Touch</span>
                 <span aria-hidden="true">↗</span>
               </a>
             </div>

@@ -1,6 +1,5 @@
 "use client";
 import { Suspense, useRef, useEffect } from "react";
-import Footer from "@/components/Character/Experience";
 import FeaturedVideo from "@/components/Featured/FeaturedVideo";
 import Header from "@/components/Featured/Header";
 import Skiggle from "@/components/Featured/Skiggle";
@@ -8,12 +7,15 @@ import SubHeader from "@/components/Featured/SubHeader";
 import Description from "@/components/Navbar/Description";
 import Navbar from "@/components/Navbar/Navbar";
 import ScrollText from "@/components/Navbar/ScrollText";
-import FeaturedWork from "@/components/FeaturedWork/FeaturedWork";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import SmoothScroll from "@/components/SmoothScroll";
 import GradualBlur from "@/components/GradualBlur/GradualBlur";
 import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
 import Projects from "@/components/Projects/Projects";
+import CoreSkills from "@/components/CoreSkills/CoreSkills";
+import Workflow from "@/components/Workflow/Workflow";
+import AdditionalSkills from "@/components/AdditionalSkills/AdditionalSkills";
+import Publications from "@/components/Publications/Publications";
 import Contact from "@/components/Contact/Contact";
 import SiteFooter from "@/components/SiteFooter/SiteFooter";
 import gsap from "gsap";
@@ -28,7 +30,7 @@ export default function Home() {
 
     console.clear();
     console.log(
-      "%cCREATED BY DEVENDER",
+      "%cBUILT BY ROHIT SURVASE",
       "background: #D9E6FF; color: #0f172a; font-size: 16px; font-weight: 800; padding: 10px 16px; border-radius: 10px; letter-spacing: 2px;"
     );
   }, []);
@@ -94,7 +96,7 @@ export default function Home() {
         {/* </div> */}
         <div
           id="about"
-          className="h-auto relative mt-16 md:mt-[10rem] px-6 sm:px-12 lg:px-20 pb-24 z-10 flex flex-col gap-8 md:gap-12"
+          className="h-auto relative mt-8 md:mt-16 px-6 sm:px-12 lg:px-20 pb-16 z-10 flex flex-col gap-8 md:gap-12"
           ref={ref}
         >
           <Skiggle />
@@ -114,6 +116,14 @@ export default function Home() {
         </div>
 
         <Projects />
+
+        <CoreSkills />
+
+        <Workflow />
+
+        <AdditionalSkills />
+
+        <Publications />
 
         <HorizontalScroll />
         <Contact />
@@ -142,21 +152,6 @@ export default function Home() {
             zIndex={1}
           />
         </div>
-        {/* <FeaturedWork />
-        <Connection className="" />
-        <div className="mt-80 w-full h-screen relative">
-          <Experience className="w-full h-full rounded-3xl" />
-        </div> */}
-        {/* <div className="bg-brblue flex items-center justify-center w-full h-screen font-extrabold text-9xl"> this is the footer  </div> */}
-        {/* <div className="relative">
-          <div className="absolute text-9xl font-bold text-center w-full h-full top-80">
-            HIRE       ME
-          </div>
-          <Footer />
-          <div className="absolute text-3xl font-bold text-center w-full h-full top-[40rem]">
-            made by mtarif
-          </div>
-        </div> */}
       </div>
     </Suspense>
     </SmoothScroll>

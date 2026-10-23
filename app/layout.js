@@ -13,10 +13,11 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Devender | Full-Stack Developer & Product Builder',
-  description: 'Devender is a Full-Stack Web Developer & UI/UX-focused Product Builder specializing in premium websites, SaaS platforms, AI applications, and modern digital experiences.',
+  title: 'Rohit Rajesh Survase | AI-Assisted Software Developer',
+  description: 'Computer Engineering Student And AI-Assisted Software Developer Specializing In Web Development, Mobile Applications, And AI-Powered Development Workflows.',
   icons: {
-    icon: '/icon.jpg',
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
 }
 

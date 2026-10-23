@@ -4,10 +4,9 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Real contact info — kept in sync with what's already in `SiteFooter`.
-// If any of these change, update them in both places.
-const PORTFOLIO_URL = "https://devendhargopagoni.netlify.app/";
-const EMAIL_ADDRESS = "devendhargopagoni@gmail.com";
+// Contact information
+const PORTFOLIO_URL = "https://rohitsurvase.in";
+const EMAIL_ADDRESS = "survaser06@gmail.com";
 
 const ArrowUpRight = () => (
   <svg
@@ -94,39 +93,39 @@ const Contact = () => {
   return (
     <section id="contact-section" ref={sectionRef}>
       <div id="ct-eyebrow" ref={eyebrowRef}>
-        {splitChars("have a project in mind?")}
+        {splitChars("Have A Project In Mind?")}
       </div>
 
       <h2 id="ct-headline" ref={headlineRef}>
-        {splitChars("let's talk.")}
+        {splitChars("Let's Talk.")}
       </h2>
 
       <a
         id="ct-email"
         href={`mailto:${EMAIL_ADDRESS}`}
         ref={emailRef}
-        aria-label="Email Devender"
+        aria-label="Email Rohit Survase"
       >
-        devendhargopagoni@gmail.com
+        {EMAIL_ADDRESS}
       </a>
 
       <div id="ct-actions" ref={ctaRef}>
         <a
           id="ct-btn"
-          href={PORTFOLIO_URL}
+          href="https://www.linkedin.com/in/rohitsurvase08"
           target="_blank"
           rel="noreferrer"
         >
-          <span>VIEW PORTFOLIO</span>
+          <span>Connect On Linkedin</span>
           <ArrowUpRight />
         </a>
         <a
           id="ct-btn-secondary"
-          href="https://nomoredms.vercel.app/"
+          href="https://github.com/rohitsurvase08"
           target="_blank"
           rel="noreferrer"
         >
-          <span>CHECK NOMOREDMS</span>
+          <span>View Github</span>
           <ArrowUpRight />
         </a>
       </div>

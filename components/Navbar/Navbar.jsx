@@ -10,9 +10,9 @@ import Link from "next/link";
 import MusicButton from "./MusicButton";
 
 // Shared contact targets — same as Menu/Contact/SiteFooter.
-const EMAIL = "devendhargopagoni@gmail.com";
-const WHATSAPP_URL = "https://wa.me/917569949639";
-const TELEGRAM_URL = "https://t.me/+917569949639";
+const EMAIL = "survaser06@gmail.com";
+const WHATSAPP_URL = "https://wa.me/919112874611";
+const TELEGRAM_URL = "https://t.me/rohitsurvase08";
 
 // Smooth-scroll to an in-page section. Uses the global Lenis instance
 // exposed by SmoothScroll (window.__lenis) so mobile nav clicks feel
@@ -35,10 +35,10 @@ const scrollToSection = (id) => {
 };
 
 const MOBILE_NAV_ITEMS = [
-  { label: "HOME", target: "top" },
-  { label: "ABOUT", target: "about" },
-  { label: "WORK", target: "projects-section" },
-  { label: "CONTACT", target: "contact-section" },
+  { label: "Home", target: "top" },
+  { label: "About", target: "about" },
+  { label: "Work", target: "projects-section" },
+  { label: "Contact", target: "contact-section" },
 ];
 
 function Navbar() {
@@ -91,12 +91,12 @@ function Navbar() {
             className="flex items-center gap-2.5 cursor-pointer hover:opacity-85 transition-opacity"
           >
             <img
-              src="/avatar-logo.jpg"
-              alt="Devender"
+              src="/profile_image.png"
+              alt="Rohit Survase"
               className="w-8 h-8 rounded-full object-cover border border-fg/10"
             />
             <span className="tracking-wider font-semibold text-lg text-fg" style={{ letterSpacing: "-0.03em" }}>
-              DEVENDER
+              Rohit
             </span>
           </Link>
           <button
@@ -158,13 +158,23 @@ function Navbar() {
           </nav>
 
           <div className="mt-auto pt-8 flex flex-col gap-3">
-            <p className="text-fg-muted text-xs tracking-[0.2em] uppercase">Get in touch</p>
+            <p className="text-fg-muted text-xs tracking-[0.2em] uppercase">Get In Touch</p>
             <a
-              href={`mailto:${EMAIL}`}
+              href="https://www.linkedin.com/in/rohitsurvase08"
+              target="_blank"
+              rel="noreferrer"
               onClick={() => setMobileOpen(false)}
               className="flex items-center justify-between bg-fg text-bg rounded-full px-5 py-4 text-sm tracking-[0.2em] font-semibold"
             >
-              <span>EMAIL</span>
+              <span>Linkedin</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center justify-between border-2 border-fg text-fg rounded-full px-5 py-4 text-sm tracking-[0.2em] font-semibold"
+            >
+              <span>Email</span>
               <span aria-hidden="true">↗</span>
             </a>
             <a
@@ -174,17 +184,7 @@ function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="flex items-center justify-between border-2 border-fg text-fg rounded-full px-5 py-4 text-sm tracking-[0.2em] font-semibold"
             >
-              <span>WHATSAPP</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a
-              href={TELEGRAM_URL}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-between border-2 border-fg text-fg rounded-full px-5 py-4 text-sm tracking-[0.2em] font-semibold"
-            >
-              <span>TELEGRAM</span>
+              <span>Whatsapp</span>
               <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -197,11 +197,11 @@ function Navbar() {
           <div className="flex items-center">
             <Link href="/" aria-label="Home" className="flex items-center gap-3 hover:opacity-85 transition-opacity">
               <img
-                src="/avatar-logo.jpg"
-                alt="Devender"
+                src="/profile_image.png"
+                alt="Rohit Survase"
                 className="w-10 h-10 rounded-full object-cover border border-fg/10"
               />
-              <span className="font-AeonikMedium text-2xl tracking-wider text-fg uppercase">DEVENDER.</span>
+              <span className="font-AeonikMedium text-2xl tracking-wider text-fg uppercase">Rohit.</span>
             </Link>
           </div>
           <div className="hidden lg:flex items-center justify-around font-AeonikMedium">

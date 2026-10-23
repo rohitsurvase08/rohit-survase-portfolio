@@ -41,7 +41,7 @@ const LetsTalk = () => {
       }}
     >
       <animated.span style={opacitySpringsReverse} className="opacity-0">➔</animated.span>
-      <animated.span style={springs}>LET'S TALK &nbsp;</animated.span>
+      <animated.span style={springs}>Let's Talk &nbsp;</animated.span>
       <animated.span style={opacitySprings}>&nbsp;•&nbsp;</animated.span>
     </a>
   );

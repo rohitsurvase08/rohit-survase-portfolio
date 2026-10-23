@@ -6,60 +6,28 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const PROJECTS = [
   {
-    name: "Personal Portfolio",
-    href: "https://devendhargopagoni.netlify.app/",
-    role: "React • Next.js • TypeScript",
-    kind: "Live",
-    note: "Modern portfolio website showcasing work, skills, and services with premium UI/UX, smooth animations, and fast performance.",
-    image: "/images/projects/personalportfolio.jpg",
+    name: "LinkAudit",
+    href: "https://github.com/rohitsurvase08/linkaudit",
+    role: "Next.js 14 • PostgreSQL • Pg-Boss • Playwright",
+    kind: "Active Development",
+    note: "Automated link health monitoring platform for websites and YouTube channels. Features comprehensive link discovery, HTTP status verification with redirect tracking, SSRF protection, affiliate detection across 40+ networks, and revenue risk classification. Built with Next.js 14, PostgreSQL job queue (pg-boss), and 433+ tests ensuring security and reliability.",
+    image: null,
   },
   {
-    name: "NoMoreDMS",
-    href: "https://nomoredms.vercel.app/",
-    role: "React • Next.js • Node.js • Supabase",
-    kind: "Live",
-    note: "Platform eliminating repetitive DMs by giving creators and professionals a central hub to share links, resources, and digital products.",
-    image: "/images/projects/nomoredms.png",
+    name: "Student Result Analysis System",
+    href: "https://github.com/rohitsurvase08/student-result-management-system",
+    role: "Flask 3.0 • PostgreSQL • Chart.js • Bcrypt",
+    kind: "Production Ready",
+    note: "Comprehensive web-based academic result management system with secure admin portal, automated grade calculations, and performance analytics. Features student/subject/marks CRUD operations, visual Chart.js dashboards, public result lookup with roll number + DOB authentication, professional report generation, and Bcrypt password security. Deployed on Render with Supabase PostgreSQL. Includes 226 tests covering authentication, CRUD operations, and security measures.",
+    image: null,
   },
   {
-    name: "EduCalc",
-    href: "https://educalc-expert0509.vercel.app/",
-    role: "React • Next.js • TypeScript",
-    kind: "Live",
-    note: "Educational platform giving students access to academic tools through a clean and responsive interface.",
-    image: "/images/projects/educalc.png",
-  },
-  {
-    name: "PostLearn",
-    href: "https://postlearn-lake.vercel.app/",
-    role: "React • Next.js",
-    kind: "Live",
-    note: "Modern learning platform focused on delivering educational content through an intuitive, engaging interface.",
-    image: "/images/projects/postlearn.png",
-  },
-  {
-    name: "Cozy Cafe Website",
-    href: "https://cozy-cafa1.netlify.app/",
-    role: "Food & Hospitality Website",
-    kind: "Live",
-    note: "Bespoke cafe website featuring online menus, ambiance galleries, and table reservation flows.",
-    image: "/images/projects/cozy-cafe.png",
-  },
-  {
-    name: "Maatoori Akshith Portfolio",
-    href: "https://maatoori-akshith.netlify.app/",
-    role: "Client Portfolio Website",
-    kind: "Live",
-    note: "Personal portfolio website built for a client to establish a strong digital presence with modern animations.",
-    image: "/images/projects/maatoori-akshith.jpg",
-  },
-  {
-    name: "TeamZ",
-    href: "https://teamz09.netlify.app/",
-    role: "Corporate / Business Website",
-    kind: "Live",
-    note: "Corporate website designed to present company services professionally with clean sections and contact forms.",
-    image: "/images/projects/teamz.png",
+    name: "NotiQ",
+    href: null,
+    role: "Flutter 3.24 • FastAPI • Gemini AI • PostgreSQL",
+    kind: "In Development",
+    note: "AI-powered mobile study-notes application that transforms rough handwritten classroom notes into structured, study-ready material. Backend uses FastAPI with Gemini 3.8 Flash for intelligent note expansion, Supabase PostgreSQL for auth and subscriptions, and Redis for job state management. Frontend built with Flutter/Dart featuring on-device SQLite storage, local PDF/DOCX export, and Riverpod state management. Implements strict CI/CD with 80% test coverage floor, metered subscription plans (10–500 pages/month), and append-only accounting ledger for usage tracking.",
+    image: null,
   },
 ];
 
@@ -188,24 +156,13 @@ const Projects = () => {
   return (
     <section id="projects-section" ref={sectionRef}>
       <div className="pj-head">
-        <span className="pj-label">PROJECTS</span>
-        <h2 className="pj-title">selected work</h2>
+        <span className="pj-label">Featured Projects</span>
+        <h2 className="pj-title">My Work</h2>
       </div>
 
       <ul className="pj-list">
         {PROJECTS.map((p, i) => (
           <Row key={p.name} item={p} index={i} />
-        ))}
-      </ul>
-
-      <div id="ventures" className="pj-head pj-head--secondary">
-        <span className="pj-label">WHAT I BUILD</span>
-        <h2 className="pj-title">products &amp; solutions</h2>
-      </div>
-
-      <ul className="pj-list">
-        {VENTURES.map((v, i) => (
-          <Row key={v.name} item={v} index={i} />
         ))}
       </ul>
     </section>
